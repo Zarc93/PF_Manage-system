@@ -1,0 +1,92 @@
+﻿@model Manage.Models.Book
+
+@{
+    ViewData["Title"] = "搜索";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <link rel="icon" href="logo_final_new.png" />
+    <title>图书查询系统</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+</head>
+<body>
+    @*<nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/Library/Search" class="navbar-brand">图书查询系统</a>
+                </div>
+
+            </div>
+        </nav>*@
+
+    <div class="container body-content">
+        <!--从此处开始写代码-->
+        <hr />
+        <hr />
+        <hr />
+        <div class="jumbotron">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>欢迎使用图书查询系统</h1>
+                    <p>请输入您需要的书名</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <form asp-action="Search" method="post">
+            <div class="form-group">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <label for="name">书名</label>
+                <input asp-for="Name" class="form-control" placeholder="请输入书名" value="@ViewData["History"]" />
+                <span class="help-block">例如：需要查询《C语言程序设计(第三版)》，可以输入'C语言'或'程序设计'</span>
+                <input type="submit" value="搜索" class="btn btn-info" />
+            </div>
+        </form>
+
+        @*<form role="form">
+                <div class="form-group">
+                    <label for="name">书名</label>
+
+
+                    <input type="text" class="form-control" id="name" placeholder="请输入书名">
+                    <span class="help-block">例如：需要查询《C语言程序设计(第三版)》，可以输入'C语言'或'程序设计'</span>
+                </div>
+                <a href="search.html" class="btn btn-default" role="button">搜索</a>
+            </form>*@
+
+
+
+
+
+
+
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://a.alipayobjects.com/g/datavis/g2/2.3.9/index.js"></script>
+
+    <!--此处写图表js-->
+
+
+
+
+
+    <hr />
+    <footer>
+    </footer>
+</body>
+</html>
+
